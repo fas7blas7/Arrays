@@ -66,14 +66,14 @@ namespace _8_SumAnArray
         }
     }
 }
-
+```
 3️⃣ ReverseAnArray 🔄
 Namespace: _9_ReverseAnArray
 📌 Description:
 Reads a specified number of integers, stores them in an array, reverses it, and prints the reversed array.
 
 📝 Code:
-
+```
 namespace _9_ReverseAnArray
 {
     internal class Program
@@ -103,11 +103,49 @@ namespace _9_ReverseAnArray
 }
 
 ```
+4️⃣ EvenVsOdd ➖➕
+Namespace: _10_EvenVsOdd
+📌 Description:
+Reads a sequence of integers, calculates the sum of even and odd numbers separately, and prints the difference (even sum minus odd sum).
+
+📝 Code:
+```
+namespace _10_EvenVsOdd
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] numbers = Console.ReadLine()
+                                   .Split(" ")
+                                   .Select(int.Parse)
+                                   .ToArray();
+
+            int evenSum = 0;
+            int oddSum = 0;
+
+            foreach (var num in numbers)
+            {
+                if (num % 2 == 0)
+                {
+                    evenSum += num;
+                }
+                else
+                {
+                    oddSum += num;
+                }
+            }
+
+            Console.WriteLine(evenSum - oddSum);
+        }
+    }
+}
+```
 📅 Commit Progress Update:
 
-📅 Current Progress: 408 commits
+📅 Current Progress: 410 commits
 📊 Progress Bar:
-██████████████████████████████████▌81.6% (408/500)
+███████████████████████████████████▎82.0% (410/500)
 
 📌 Milestones:
 ✅ 100 commits
@@ -115,6 +153,7 @@ namespace _9_ReverseAnArray
 ✅ 300 commits
 ✅ 400 commits
 🔲 500 commits (🎉)
+
 🎯 Commit Progress Tracker
 
 🚀 Goal: 500 commits in 2025
