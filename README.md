@@ -141,11 +141,61 @@ namespace _10_EvenVsOdd
     }
 }
 ```
+✅ Modified README.md content:
+md
+Copy
+Edit
+5️⃣ ZigZagArrays 🔀  
+Namespace: _05.ZigZagArrays  
+📌 Description:  
+Reads a sequence of pairs of integers and fills two arrays in a zig-zag pattern: first array gets the first number on even rows and the second on odd rows; vice versa for the second array.
+
+📝 Code:
+```csharp
+namespace _05.ZigZagArrays
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+
+            int[] firstArray = new int[n];
+            int[] secondArray = new int[n];
+
+            for (int i = 0; i < n; i++)
+            {
+                int[] currentNumberPair = Console.ReadLine()
+                    .Split()
+                    .Select(int.Parse)
+                    .ToArray();
+
+                int firstNumber = currentNumberPair[0];
+                int secondNumber = currentNumberPair[1];
+                if (i % 2 == 0)
+                {
+                    firstArray[i] = firstNumber;
+                    secondArray[i] = secondNumber;
+                }
+                else
+                {
+                    firstArray[i] = secondNumber;
+                    secondArray[i] = firstNumber;
+                }
+            }
+
+            Console.WriteLine(string.Join(" ", firstArray));
+            Console.WriteLine(string.Join(" ", secondArray));
+        }
+    }
+}
+
+```
 📅 Commit Progress Update:
 
-📅 Current Progress: 410 commits
+📅 Current Progress: 419 commits
 📊 Progress Bar:
-███████████████████████████████████▎82.0% (410/500)
+████████████████████████████████████▌83.8% (419/500)
 
 📌 Milestones:
 ✅ 100 commits
@@ -155,5 +205,4 @@ namespace _10_EvenVsOdd
 🔲 500 commits (🎉)
 
 🎯 Commit Progress Tracker
-
 🚀 Goal: 500 commits in 2025
