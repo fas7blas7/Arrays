@@ -141,10 +141,6 @@ namespace _10_EvenVsOdd
     }
 }
 ```
-✅ Modified README.md content:
-md
-Copy
-Edit
 5️⃣ ZigZagArrays 🔀  
 Namespace: _05.ZigZagArrays  
 📌 Description:  
