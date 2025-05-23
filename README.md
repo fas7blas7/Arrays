@@ -36,6 +36,7 @@ namespace _7_DayOfWeek
     }
 }
 
+```
 2️⃣ SumAnArray ➕  
 Namespace: _8_SumAnArray  
 📌 Description:  
@@ -109,7 +110,7 @@ Namespace: _10_EvenVsOdd
 Reads a sequence of integers, calculates the sum of even and odd numbers separately, and prints the difference (even sum minus odd sum).
 
 📝 Code:
-```
+```csharp
 namespace _10_EvenVsOdd
 {
     internal class Program
@@ -186,16 +187,15 @@ namespace _05.ZigZagArrays
     }
 }
 
+```
 6️⃣ ArrayRotation 🔁
 Namespace: _06.ArrayRotation
 📌 Description:
 Reads an array and a number of rotations. Rotates the array to the left that many times and prints the result.
 
 📝 Code:
+```csharp
 
-csharp
-Copy
-Edit
 namespace _06.ArrayRotation
 {
     internal class Program
@@ -232,17 +232,60 @@ namespace _06.ArrayRotation
 }
 
 ```
-📅 Commit Progress Update:
-📅 Current Progress: 421 commits
-📊 Progress Bar:
-█████████████████████████████████████▉84.2% (421/500)
+7️⃣ TopIntegers 🔝  
+Namespace: _07.TopIntegers  
+📌 Description:  
+Reads a sequence of integers and prints all top integers (an integer is top if it is greater than all elements to its right).
 
-📌 Milestones:
-✅ 100 commits
-✅ 200 commits
-✅ 300 commits
-✅ 400 commits
+📝 Code:
+```csharp
+namespace _07.TopIntegers
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] numbers = Console.ReadLine()
+               .Split()
+               .Select(int.Parse)
+               .ToArray();
+
+            // 5 2 8
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                int currentNumber = numbers[i]; // 5
+                bool isTopNumber = true;
+                for (int j = i + 1; j < numbers.Length; j++)
+                {
+                    int nextNumber = numbers[j]; // 2
+                    if (currentNumber <= nextNumber)
+                    {
+                        isTopNumber = false;
+                        break;
+                    }
+                }
+
+                if (isTopNumber)
+                {
+                    Console.Write($"{currentNumber} ");
+                }
+            }
+        }
+    }
+}
+
+```
+📅 Commit Progress Update:
+📅 Current Progress: 427 commits  
+📊 Progress Bar:  
+██████████████████████████████████████▊85.4% (427/500)
+
+📌 Milestones:  
+✅ 100 commits  
+✅ 200 commits  
+✅ 300 commits  
+✅ 400 commits  
 🔲 500 commits (🎉)
 
-🎯 Commit Progress Tracker
+🎯 Commit Progress Tracker  
 🚀 Goal: 500 commits in 2025
